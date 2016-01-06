@@ -1,0 +1,21 @@
+[{
+    "id": "55d1f53aefd58239f0036b16",
+    "name": "4-Slice Toaster",
+    "value": 39.95,
+    "description": "Extra wide slots to accommodate a variety of breads, dishwasher safe and removable crumb tray for easy cleaning."
+}, {
+    "id": "55d1f53a20c8977841e31b7f",
+    "name": "Single-Serve Blender",
+    "value": 17.99,
+    "description": "Compact design ideal for small living spaces and on-the-go portability"
+}, {
+    "id": "55d1f53aec74499d82ff82a3",
+    "name": "French Press",
+    "value": 19.99,
+    "description": "We think you're going to love this French Press as much as we do!"
+}, {
+    "id": "55d1f53a2ef9c22ea4d7a05f",
+    "name": "Quilted Oven Mitts",
+    "value": 7.99,
+    "description": "Professional quality for every kitchen"
+}]

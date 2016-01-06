@@ -1,0 +1,61 @@
+[{
+    "id": "55d1f53aefd58239f0036b16",
+    "reviews": [{
+        "id": 0,
+        "author": "Mark Sixma",
+        "feedback": "Good Product."
+    }, {
+        "id": 1,
+        "author": "Tywin Lanister",
+        "feedback": "This is a good product."
+    }, {
+        "id": 2,
+        "author": "Jon Snow",
+        "feedback": "BEST CUP OF COFFEE EVER"
+    }]
+}, {
+    "id": "55d1f53a20c8977841e31b7f",
+    "reviews": [{
+        "id": 0,
+        "author": "Emily Mills",
+        "feedback": "Good Product."
+    }, {
+        "id": 1,
+        "author": "Roxanne Emery",
+        "feedback": "Five Stars"
+    }, {
+        "id": 2,
+        "author": "Patrica White",
+        "feedback": "I love the taste of filter coffee so instead of using ..."
+    }]
+}, {
+    "id": "55d1f53aec74499d82ff82a3",
+    "reviews": [{
+        "id": 0,
+        "author": "Casey Giordano",
+        "feedback": "Terrible!"
+    }, {
+        "id": 1,
+        "author": "True8",
+        "feedback": "It's OK."
+    }, {
+        "id": 2,
+        "author": "Arya Snow",
+        "feedback": "Broke within 2 weeks, otherwise it was great...huh?"
+    }]
+}, {
+    "id": "55d1f53a2ef9c22ea4d7a05f",
+    "reviews": [{
+        "id": 0,
+        "author": "Christina Novelli",
+        "feedback": "Makes Coffee!"
+    }, {
+        "id": 1,
+        "author": "Amazon Customer",
+        "feedback": "Amazing product for the price"
+    }, {
+        "id": 2,
+        "author": "Rose",
+        "feedback": "When I was asked to review a French Coffee Press, I wasn't sure if I should accept the offer because I had never used one. I have heard how much better coffee tastes when using a French Press & did some online research to learn the proper techniques so I accepted their review sample offer and made my first cup of French Press coffee."
+    }]
+}]
