@@ -20,4 +20,4 @@ Clone repo and run the content locally
 ```bash
 $ python -m SimpleHTTPServer
 ```
-visit to localhost://8000
+visit localhost://8000 to view the project

@@ -1,23 +1,21 @@
-$(function() {
+/* jshint -W117 */
+
+(function() {
     'use strict';
 
     var URL = '#';
-    var mockProducts = 'product.json';
-    var mockReviews = 'reviews.json';
-
+    var mockProducts = './src/server/mockdata/product.json';
+    var mockReviews = './src/server/mockdata/reviews.json';
     var loadLink = $('a.load-btn');
-
     var productCollection = [];
     var reviewsCollection = [];
-
     var productArray = [];
     var reviewsData = [];
 
-    function init (){
+    function init () {
         getProducts();
         getReviews();
     }
-
 
     var Review = function(productID, reviewID, author, feedback) {
         this.productID = productID;
@@ -44,24 +42,22 @@ $(function() {
     }
 
     function getProducts() {
-
-        var getProducts = $.getJSON( mockProducts, function (data) {
+        var getProductData = $.getJSON(mockProducts, function (data) {
             processProducts(data);
         });
 
-        $.when(getProducts).then(function(storedProducts) {
+        $.when(getProductData).then(function(storedProducts) {
             storedProducts = productCollection;
             buildProducts(productCollection);
         });
     }
 
     function getReviews() {
-
-        var getReviews = $.getJSON( mockReviews, function (data) {
+        var getReviewData = $.getJSON(mockReviews, function (data) {
             processReviews(data);
         });
 
-        $.when(getReviews).then(function(storedReviews) {
+        $.when(getReviewData).then(function(storedReviews) {
             storedReviews = reviewsCollection;
             parseReviews(reviewsCollection);
         });
@@ -76,15 +72,14 @@ $(function() {
 
             createProduct(productID, productName, productValue, productDescription);
         }
-        
     }
 
     function processReviews(reviewData) {
         for (var i = 0; i < reviewData.length; i++) {
             var relationID = reviewData[i].id;
             var theReviews = reviewData[i].reviews;
-            
-            for (var j = 0; j < theReviews.length; j++){
+
+            for (var j = 0; j < theReviews.length; j++) {
                 var reviewID = theReviews[j].id;
                 var reviewAuthor = theReviews[j].author;
                 var reviewFeedback = theReviews[j].feedback;
@@ -94,22 +89,21 @@ $(function() {
         }
     }
 
-
     function buildProductRow(product) {
-        var row = $("<tr />");
-        $(".product-table tbody").append(row);
-        row.append($("<td>" + product.id + "</td>"));
-        row.append($("<td>" + product.name + "</td>"));
-        row.append($("<td>" + product.value + "</td>"));
-        row.append($("<td class='description'>" + product.description + "</td>"));
-        row.append($("<td><a href='#' class='load-btn btn-sm btn-default' id='" + product.id + "'>Read Reviews</a></td>"));
+        var row = $('<tr />');
+        $('.product-table tbody').append(row);
+        row.append($('<td>' + product.id + '</td>'));
+        row.append($('<td>' + product.name + '</td>'));
+        row.append($('<td>' + product.value + '</td>'));
+        row.append($('<td>' + product.description + '</td>'));
+        row.append($('<td><a href="#" class="load-btn btn-sm btn-default" id="' + product.id + '">Read Reviews</a></td>'));
     }
 
     function buildReviewRow(review) {
-        var row = $("<tr />");
-        $(".review-table tbody").append(row);
-        row.append($("<td>" + review.author + "</td>"));
-        row.append($("<td>" + review.feedback + "</td>"));
+        var row = $('<tr />');
+        $('.review-table tbody').append(row);
+        row.append($('<td>' + review.author + '</td>'));
+        row.append($('<td>' + review.feedback + '</td>'));
     }
 
     function buildProducts(data) {
@@ -124,9 +118,7 @@ $(function() {
         }
     }
 
-
     function parseReviews(data) {
-        console.log(reviewsCollection);
         $('.product-table').on('click', loadLink, passedID);
 
         function passedID() {
@@ -136,13 +128,12 @@ $(function() {
 
             for (var i = 0; i < reviewsCollection.length; i++) {
                 if (reviewsCollection[i].productID === targetID) {
-                    $('.reviews').append('<p class="well">' + reviewsCollection[i].author + ':' + reviewsCollection[i].feedback + '</p>');
+                    $('.reviews').append('<p class="well">Author: ' + reviewsCollection[i].author +
+                    '<br />Feedback: ' + reviewsCollection[i].feedback + '</p>');
                 }
             }
         }
     }
 
     init();
-
-
 }());

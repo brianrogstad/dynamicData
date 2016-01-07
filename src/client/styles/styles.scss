@@ -1,0 +1,66 @@
+// colors
+$mine-shaft: #505050;
+$mid-grey: #ddd;
+$dark-grey: #969696;
+$silver: #666;
+$off-white: #ececec;
+
+body {
+    background-color: $off-white;
+    color: $mine-shaft;
+    font-family: arial;
+    font-size: 14px;
+    margin: 0 auto;
+    max-width: 1368px;
+}
+
+.page {
+    margin: 0;
+    padding: 30px 5%;
+}
+
+.product-table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    margin: 0 0 25px;
+    table-layout: fixed;
+    width: 100%;
+}
+
+h1 {
+    margin: 0 0 25px;
+    text-align: center;
+}
+
+th {
+    border-bottom: 1px solid $mid-grey;
+}
+
+td,
+th {
+    padding: 10px;
+    text-align: center;
+    width: 20px;
+}
+
+.load-btn {
+    background: $dark-grey;
+    color: $off-white;
+    display: block;
+    margin: 0 auto;
+    padding: 10px;
+    text-decoration: none;
+    width: 80%;
+}
+
+.load-btn:hover {
+    background: $silver;
+    color: $mid-grey;
+    text-decoration: none;
+}
+
+.load-btn:focus,
+.load-btn:active {
+    text-decoration: none;
+}
+
