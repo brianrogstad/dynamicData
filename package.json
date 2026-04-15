@@ -34,7 +34,7 @@
     "gulp-scss-lint": "^0.3.8",
     "gulp-sourcemaps": "^1.5.1",
     "gulp-util": "^3.0.4",
-    "jscs": "^2.8.0",
+    "jscs": "^3.0.7",
     "jshint": "^2.8.0",
     "jshint-stylish": "^1.0.1",
     "yargs": "^3.6.0"
