@@ -21,7 +21,7 @@
     "express": "^4.9.3"
   },
   "devDependencies": {
-    "gulp": "^3.8.11",
+    "gulp": "^5.0.1",
     "gulp-autoprefixer": "^2.1.0",
     "gulp-if": "^2.0.0",
     "gulp-jscs": "^3.0.2",
